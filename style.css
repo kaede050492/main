@@ -1,0 +1,136 @@
+/* アニメーション */
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "M PLUS Rounded 1c", sans-serif; /* 全体に適用 */
+    background: linear-gradient(135deg, #89cff0, #ff7eb3);
+    color: #333;
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* アイコンを上部に配置 */
+.icon-container {
+    text-align: center;
+    margin-bottom: 1rem;
+    animation: fadeInFromTop 1s ease-out;
+}
+
+.icon {
+    width: 120px; /* アイコンの大きさ */
+    height: 120px;
+    border-radius: 50%;
+}
+
+/* メインコンテンツ */
+.main-container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 2rem; /* メインコンテンツとSNSコンテンツの間隔 */
+    animation: fadeInFromBottom 1s ease-out;
+}
+
+.redirect-buttons {
+    margin-top: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    background: linear-gradient(135deg, #ff7eb3, #89cff0);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* SNSリンクコンテナ */
+.social-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* SNSリンクの個別ブロック */
+.social-blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列固定 */
+    gap: 1rem; /* 各ブロック間のスペース */
+    justify-content: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* SNSアイテム */
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    text-decoration: none; /* リンクの下線を消す */
+    color: inherit; /* テキスト色を継承 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeInFromBottom 1s ease-out;
+}
+
+.social-item:hover {
+    transform: scale(1.05);
+}
+
+.social-item img {
+    height: 40px;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-item:hover img {
+    transform: scale(1.05);
+}
+
+.social-item span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
