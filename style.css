@@ -134,3 +134,28 @@ body {
     font-weight: bold;
     color: #333;
 }
+/* スマホ・タブレット対応 */
+@media (max-width: 768px) {
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .main-container {
+        padding: 1rem;
+    }
+
+    .redirect-buttons .button {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .social-blocks {
+        grid-template-columns: 1fr; /* 1列表示に変更 */
+        gap: 0.8rem;
+    }
+
+    .social-item {
+        padding: 0.5rem;
+    }
+}
